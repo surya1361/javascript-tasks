@@ -1,267 +1,329 @@
-// Task 1
-
-let name = "Naveen";
-let employeeId = "EMP1001";
-let department = "Frontend";
-let salary = 25000;
-let isPermanent = true;
-
-console.log("Name :", name);
-console.log("Employee ID :", employeeId);
-console.log("Department :", department);
-console.log("Salary :", salary);
-console.log("Permanent :", isPermanent);
-
-// ======================================
-// Task 2 - Student Details
-// ======================================
-
-let student = {
-    name: "Rahul",
-    age: 21,
-    course: "MCA",
-    college: "PSNA College",
-    passed: true
-};
-
-console.log("\n===== Task 2 =====");
-console.log("Student Name :", student.name);
-console.log("Course :", student.course);
-console.log("Passed :", student.passed);
-
-// ======================================
-// Task 3 - Shopping Cart
-// ======================================
-
-let products = ["Milk", "Rice", "Oil", "Sugar", "Soap"];
-
-console.log("\n===== Task 3 =====");
-console.log("First Product :", products[0]);
-console.log("Third Product :", products[2]);
-console.log("Last Product :", products[4]);
-console.log("Total Products :", products.length);
-
-// ======================================
-// Task 4 - Company Employee Database
-// ======================================
-
-let employee = {
-    name: "Arun",
-    designation: "Software Developer",
-    salary: 35000,
-    skills: ["HTML", "CSS", "JavaScript", "React"]
-};
-
-console.log("\n===== Task 4 =====");
-console.log("Employee Name :", employee.name);
-console.log("Designation :", employee.designation);
-console.log("Second Skill :", employee.skills[1]);
-
-// ======================================
-// Task 5 - Salary Calculation
-// ======================================
-
-let basicSalary = 25000;
-let bonus = 5000;
-let totalSalary = basicSalary + bonus;
-
-console.log("\n===== Task 5 =====");
-console.log("Total Salary :", totalSalary);
-
-// ======================================
-// Task 6 - GST Calculator
-// ======================================
-
-let productPrice = 4500;
-let gst = 18;
-let gstAmount = productPrice * gst / 100;
-let finalAmount = productPrice + gstAmount;
-
-console.log("\n===== Task 6 =====");
-console.log("GST Amount :", gstAmount);
-console.log("Final Amount :", finalAmount);
-
-// ======================================
-// Task 7 - Even or Odd
-// ======================================
-
-let number = 25;
-
-console.log("\n===== Task 7 =====");
-console.log(number % 2 == 0 ? "Even Number" : "Odd Number");
-
-// ======================================
-// Task 8 - Login System
-// ======================================
-
-let username = "admin";
-let password = "12345";
-
-console.log("\n===== Task 8 =====");
+// ===============================
+// Task 1: Employee Login System
+// ===============================
+let username = prompt("Task 1\nEnter Username:");
+let password = prompt("Enter Password:");
 
 if (username === "admin" && password === "12345") {
-    console.log("Login Success");
+    console.log("Login Successful");
 } else {
-    console.log("Invalid Credentials");
+    console.log("Invalid Username or Password");
 }
 
-// ======================================
-// Task 9 - Voting Eligibility
-// ======================================
 
-let age = 22;
+// ===============================
+// Task 2: E-Commerce Discount
+// ===============================
+let amount = Number(prompt("Task 2\nEnter Purchase Amount:"));
 
-console.log("\n===== Task 9 =====");
-console.log(age >= 18 ? "Eligible for Vote" : "Not Eligible");
+if (amount >= 5000) {
+    let discount = amount * 0.20;
+    let finalAmount = amount - discount;
 
-// ======================================
-// Task 10 - EMI Eligibility
-// ======================================
+    console.log("20% Discount Applied");
+    console.log("Discount:", discount);
+    console.log("Final Amount:", finalAmount);
+} else {
+    console.log("No Discount");
+    console.log("Final Amount:", amount);
+}
 
-let salary1 = 40000;
-let experience = 3;
 
-console.log("\n===== Task 10 =====");
+// ===============================
+// Task 3: ATM Withdrawal
+// ===============================
+let balance = 10000;
+let withdraw = Number(prompt("Task 3\nEnter Withdrawal Amount:"));
 
-if (salary1 > 30000 && experience >= 2) {
+if (withdraw <= balance) {
+    balance = balance - withdraw;
+    console.log("Transaction Success");
+    console.log("Balance:", balance);
+} else {
+    console.log("Insufficient Balance");
+}
+
+
+// ===============================
+// Task 4: Student Grade System
+// ===============================
+let mark = Number(prompt("Task 4\nEnter Mark:"));
+
+if (mark >= 90) {
+    console.log("Grade A");
+} else if (mark >= 80) {
+    console.log("Grade B");
+} else if (mark >= 70) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+
+// ===============================
+// Task 5: Traffic Signal
+// ===============================
+let signal = prompt("Task 5\nEnter Signal (red/yellow/green):");
+
+switch (signal) {
+    case "red":
+        console.log("Stop");
+        break;
+
+    case "yellow":
+        console.log("Ready");
+        break;
+
+    case "green":
+        console.log("Go");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+
+
+// ===============================
+// Task 6: Online Shopping Delivery
+// ===============================
+let order = Number(prompt("Task 6\nEnter Order Amount:"));
+
+let delivery;
+
+if (order >= 1000) {
+    delivery = 0;
+} else {
+    delivery = 80;
+}
+
+let total = order + delivery;
+
+console.log("Order Amount:", order);
+console.log("Delivery:", delivery);
+console.log("Total:", total);
+
+
+// ===============================
+// Task 7: User Age Verification
+// ===============================
+let age = Number(prompt("Task 7\nEnter Age:"));
+
+if (age >= 18) {
     console.log("Eligible");
 } else {
     console.log("Not Eligible");
 }
 
-// ======================================
-// Task 11 - Product Discount
-// ======================================
 
-let price = 5000;
-let discount = 10;
-let discountAmount = price * discount / 100;
-let finalPrice = price - discountAmount;
+// ===============================
+// Task 8: Largest Among 3 Numbers
+// ===============================
+let a = Number(prompt("Task 8\nEnter First Number:"));
+let b = Number(prompt("Enter Second Number:"));
+let c = Number(prompt("Enter Third Number:"));
 
-console.log("\n===== Task 11 =====");
-console.log("Discount Amount :", discountAmount);
-console.log("Final Price :", finalPrice);
-
-// ======================================
-// Task 12 - User Registration
-// ======================================
-
-let userName = "Surya";
-let email = "surya@gmail.com";
-let phone = "9876543210";
-let city = "Dindigul";
-
-console.log("\n===== Task 12 =====");
-console.log("----- User Details -----");
-console.log("Name :", userName);
-console.log("Email :", email);
-console.log("Phone :", phone);
-console.log("City :", city);
-
-// ======================================
-// Task 13 - Social Media Profile
-// ======================================
-
-let profile = {
-    username: "surya123",
-    followers: 500,
-    following: 250,
-    posts: 35,
-    verified: false
-};
-
-console.log("\n===== Task 13 =====");
-console.log("Username :", profile.username);
-console.log("Followers :", profile.followers);
-console.log("Verified :", profile.verified);
-
-// ======================================
-// Task 14 - Restaurant Menu
-// ======================================
-
-let menu = ["Idli", "Dosa", "Poori", "Meals", "Parotta"];
-
-console.log("\n===== Task 14 =====");
-console.log("Second Item :", menu[1]);
-console.log("Fourth Item :", menu[3]);
-console.log("Last Item :", menu[4]);
-
-// ======================================
-// Task 15 - Banking System
-// ======================================
-
-let accountBalance = 25000;
-let withdraw = 8000;
-let remainingBalance = accountBalance - withdraw;
-
-console.log("\n===== Task 15 =====");
-console.log("Remaining Balance :", remainingBalance);
-
-// ======================================
-// Task 16 - Mobile Store
-// ======================================
-
-let mobilePrice = 25000;
-let exchange = 5000;
-let coupon = 2000;
-let finalMobilePrice = mobilePrice - exchange - coupon;
-
-console.log("\n===== Task 16 =====");
-console.log("Final Amount :", finalMobilePrice);
-
-// ======================================
-// Task 17 - Employee Promotion
-// ======================================
-
-let exp = 5;
-let performance = true;
-
-console.log("\n===== Task 17 =====");
-
-if (exp >= 5 && performance) {
-    console.log("Promotion Approved");
+if (a >= b && a >= c) {
+    console.log("Largest:", a);
+} else if (b >= a && b >= c) {
+    console.log("Largest:", b);
 } else {
-    console.log("Promotion Pending");
+    console.log("Largest:", c);
 }
 
-// ======================================
-// Task 18 - Movie Ticket
-// ======================================
 
-let ticketPrice = 180;
-let people = 5;
-let totalAmount = ticketPrice * people;
+// ===============================
+// Task 9: Mobile Password
+// ===============================
+let pin = prompt("Task 9\nEnter 4-Digit PIN:");
 
-console.log("\n===== Task 18 =====");
-console.log("Total Amount :", totalAmount);
+if (pin.length === 4) {
+    console.log("Login Success");
+} else {
+    console.log("Invalid PIN");
+}
 
-// ======================================
-// Task 19 - Weather App
-// ======================================
 
-let temperature = 38;
+// ===============================
+// Task 10: Product Stock
+// ===============================
+let stock = Number(prompt("Task 10\nEnter Stock:"));
 
-console.log("\n===== Task 19 =====");
-console.log(temperature > 35 ? "Hot Day" : "Normal Weather");
+if (stock === 0) {
+    console.log("Out of Stock");
+} else {
+    console.log("Available");
+}
 
-// ======================================
-// Task 20 - Mini HR Management
-// ======================================
 
-let employeeDetails = {
-    empCode: "EMP1001",
+// ===============================
+// Task 11: Employee Salary Bonus
+// ===============================
+let salary = Number(prompt("Task 11\nEnter Salary:"));
+
+if (salary > 50000) {
+    console.log("Bonus: 10000");
+} else if (salary > 30000) {
+    console.log("Bonus: 5000");
+} else {
+    console.log("Bonus: 2000");
+}
+
+
+// ===============================
+// Task 12: Electricity Bill
+// ===============================
+let units = Number(prompt("Task 12\nEnter Units:"));
+let bill;
+
+if (units <= 100) {
+    bill = units * 2;
+} else if (units <= 200) {
+    bill = (100 * 2) + ((units - 100) * 4);
+} else {
+    bill = (100 * 2) + (100 * 4) + ((units - 200) * 6);
+}
+
+console.log("Total Bill:", bill);
+
+
+// ===============================
+// Task 13: Movie Ticket Booking
+// ===============================
+let movieAge = Number(prompt("Task 13\nEnter Age:"));
+
+if (movieAge < 5) {
+    console.log("Free");
+} else if (movieAge <= 18) {
+    console.log("Ticket Price: ₹100");
+} else {
+    console.log("Ticket Price: ₹200");
+}
+
+
+// ===============================
+// Task 14: Hospital Token System
+// ===============================
+let patient = prompt("Task 14\nEmergency / Senior Citizen / Normal");
+
+switch (patient) {
+    case "Emergency":
+        console.log("Token 1");
+        break;
+
+    case "Senior Citizen":
+        console.log("Priority");
+        break;
+
+    case "Normal":
+        console.log("Regular Queue");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+
+
+// ===============================
+// Task 15: Company Attendance
+// ===============================
+let attendance = prompt("Task 15\nPresent / Leave / Absent");
+
+switch (attendance) {
+    case "Present":
+        console.log("Working");
+        break;
+
+    case "Leave":
+        console.log("Leave Approved");
+        break;
+
+    case "Absent":
+        console.log("Salary Deduction");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+
+
+// ===============================
+// Task 16: Grocery Cart Total
+// ===============================
+let rice = 500;
+let sugar = 300;
+let oil = 250;
+
+let cartTotal = rice + sugar + oil;
+
+console.log("Total:", cartTotal);
+
+if (cartTotal > 1000) {
+    let discount = cartTotal * 0.10;
+    cartTotal = cartTotal - discount;
+
+    console.log("10% Discount Applied");
+    console.log("Final Total:", cartTotal);
+}
+
+
+// ===============================
+// Task 17: Array Task
+// ===============================
+let products = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+
+for (let i = 0; i < products.length; i++) {
+    console.log((i + 1) + ". " + products[i]);
+}
+
+
+// ===============================
+// Task 18: Employee Database
+// ===============================
+let employee = {
     name: "Rahul",
-    department: "Frontend",
-    designation: "Associate Software Engineer",
-    salary: 28000,
-    skills: ["HTML", "CSS", "JavaScript", "React"],
-    permanent: true
+    role: "Developer",
+    salary: 50000
 };
 
-console.log("\n===== Task 20 =====");
-console.log("Employee Code :", employeeDetails.empCode);
-console.log("Employee Name :", employeeDetails.name);
-console.log("Department :", employeeDetails.department);
-console.log("Salary :", employeeDetails.salary);
-console.log("Last Skill :", employeeDetails.skills[3]);
-console.log("Permanent :", employeeDetails.permanent);
+for (let key in employee) {
+    console.log(employee[key]);
+}
+
+
+// ===============================
+// Task 19: Type Casting
+// ===============================
+let number = Number("100");
+let boolean = Boolean("true");
+let string = String(200);
+
+console.log(number);
+console.log(boolean);
+console.log(string);
+
+
+// ===============================
+// Task 20: Banking Menu
+// ===============================
+let choice = Number(prompt("Task 20\n1.Deposit\n2.Withdraw\n3.Balance\n4.Exit"));
+
+switch (choice) {
+    case 1:
+        console.log("Deposit");
+        break;
+
+    case 2:
+        console.log("Withdraw");
+        break;
+
+    case 3:
+        console.log("Balance");
+        break;
+
+    case 4:
+        console.log("Exit");
+        break;
+
+    default:
+        console.log("Invalid Choice");
+}

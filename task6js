@@ -1,0 +1,15 @@
+let order = Number(prompt("Enter Order Amount:"));
+
+let delivery;
+
+if (order >= 1000) {
+    delivery = 0;
+} else {
+    delivery = 80;
+}
+
+let total = order + delivery;
+
+console.log("Order Amount:", order);
+console.log("Delivery:", delivery);
+console.log("Total:", total);
