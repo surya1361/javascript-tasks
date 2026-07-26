@@ -1,5 +1,7 @@
-let username = prompt("Task 1\nEnter Username:");
-let password = prompt("Enter Password:");
+// Task 6: Login System
+
+let username = "admin";
+let password = "12345";
 
 if (username === "admin" && password === "12345") {
     console.log("Login Successful");
